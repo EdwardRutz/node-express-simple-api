@@ -11,15 +11,15 @@ const records = require('./records');
 
 //View, send a GET request to /quotes to READ a list of quotes
 app.get('/quotes', async (req, res) => {
-  const quotes = await records.getQuotes();
+  const quotes = await records.getQuotes();  //await pauses until line is completed before moving on to avoid getting an empty json object
   res.json(quotes);
 });
 
 //View, send a GET request to /quotes/:id to READ one quote
 //A colon (:) indicates a URL parameter which is a value added in the URL and passed to the route
-app.get('/quotes/:id', (req, res) => {
-  // const quote = data.quotes.find(quote => quote.id == req.params.id); //Find the requested quote in the data store.
-  // res.json({quote});
+app.get('/quotes/:id', async (req, res) => {
+  const quote = await records.getQuote(req.params.id);
+  res.json({quote});
 });
 
 //Create, Send a POST request to /quotes to CREATE a new quote

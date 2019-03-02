@@ -39,7 +39,7 @@ function getQuotes(){
  */
 async function getQuote(id){
   const quotes = await getQuotes();
-  return quotes.takeRecords.find(record => record.id == id);
+  return quotes.records.find(record => record.id == id);
 }
 
 /**
