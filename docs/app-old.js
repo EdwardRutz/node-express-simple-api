@@ -1,7 +1,6 @@
 const express = require('express');   //Import Express
 const app = express();  //Create an Express App
 
-const records = require('./records');
 
 //An Express GET route handler
 //The Express function adds a bunch of methods to Nodes HTTP server to make
@@ -11,14 +10,13 @@ const records = require('./records');
 
 //View, send a GET request to /quotes to READ a list of quotes
 app.get('/quotes', (req, res) => {
-  res.json({data})
+
 });
 
 //View, send a GET request to /quotes/:id to READ one quote
 //A colon (:) indicates a URL parameter which is a value added in the URL and passed to the route
 app.get('/quotes/:id', (req, res) => {
-  const quote = data.quotes.find(quote => quote.id == req.params.id); //Find the requested quote in the data store.
-  res.json({quote});
+
 });
 
 //Create, Send a POST request to /quotes to CREATE a new quote
