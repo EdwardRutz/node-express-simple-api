@@ -10,15 +10,16 @@ const records = require('./records');
 //GET arguements are (route, call back function/how we want to respond)
 
 //View, send a GET request to /quotes to READ a list of quotes
-app.get('/quotes', (req, res) => {
-  res.json({data})
+app.get('/quotes', async (req, res) => {
+  const quotes = await records.getQuotes();
+  res.json(quotes);
 });
 
 //View, send a GET request to /quotes/:id to READ one quote
 //A colon (:) indicates a URL parameter which is a value added in the URL and passed to the route
 app.get('/quotes/:id', (req, res) => {
-  const quote = data.quotes.find(quote => quote.id == req.params.id); //Find the requested quote in the data store.
-  res.json({quote});
+  // const quote = data.quotes.find(quote => quote.id == req.params.id); //Find the requested quote in the data store.
+  // res.json({quote});
 });
 
 //Create, Send a POST request to /quotes to CREATE a new quote
