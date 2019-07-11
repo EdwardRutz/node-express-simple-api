@@ -6,7 +6,7 @@ const app = express();  //Create an Express App
 //The Express function adds a bunch of methods to Nodes HTTP server to make
 //  it easier to respond to requests
 //GET methods responds to requests through the route called /greetings
-//GET arguements are (route, call back function/how we want to respond)
+//GET arguments are (route, call back function/how we want to respond)
 
 //View, send a GET request to /quotes to READ a list of quotes
 app.get('/quotes', (req, res) => {

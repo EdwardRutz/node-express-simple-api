@@ -71,5 +71,5 @@ module.exports = {
   getQuotes,
   getQuote,
   getRandomQuote
-}
+};
 
