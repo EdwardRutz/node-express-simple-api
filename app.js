@@ -26,10 +26,15 @@ app.get('/quotes/:id', async (req, res) => {
   res.json({quote});
 });
 
-//Create, Send a POST request to /quotes to CREATE a new quote
-//Edit, send a PUT request to /quotes/:id to UPDATE a quote
-//Delete, send a DELETE request to /quotes/:id to DELETE a quote
-//View, send a GET request to /quotes/quotes/random to READ a random quote
+// Send a POST request to /quotes to CREATE a new quote
+
+
+
+
+
+// Send a PUT request to /quotes/:id to UPDATE a quote
+// Send a DELETE request to /quotes/:id to DELETE a quote
+// Send a GET request to /quotes/quotes/random to READ a random quote
 
 
 
