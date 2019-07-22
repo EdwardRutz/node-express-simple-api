@@ -9,6 +9,10 @@ const records = require('./records');
 //GET methods responds to requests through the route called /greetings
 //GET arguments are (route, call back function/how we want to respond)
 
+app.get('/', (req, res) => {
+  res.json({welcome: "Welcome to the Simple API Tutorial"});
+});
+
 app.get('/greetings', (req, res) => {
   res.json({greeting: "Hello World!"});
 });
@@ -39,4 +43,4 @@ app.get('/quotes/:id', async (req, res) => {
 
 
 //Listen on port 3000
-app.listen(3000, () => console.log('Quote API listening on port 3000'));
+app.listen(3002, () => console.log('Quote API listening on port 3002'));
